@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Input del texto -->
+        <div class="input-container">
+            <textarea 
+                id="input-text" 
+                class="input-text" 
+                placeholder="Escribe un texto"
+                rows="30"
+            ></textarea>
+
+            <div class="input-text-footer">
+                <div class="warning">
+                    <img 
+                        src="assets/alert-circle-outline.svg" 
+                        alt="alert-circle" 
+                        class="alert-icon"
+                    />
+                    <p class="warning-text">Solo letras minusculas y sin acentos.</p>
+                </div>
+            
+                <div class="button-container">
+                    <button class="encrypt-button" id="encrypt-button">Encriptar</button>
+                    <button class="decrypt-button" id="decrypt-button">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="result-container">
+            <div class="not-found">
+                <img 
+                    src="assets/Muñeco.png" 
+                    id="not-found-img" 
+                    class="not-found-img" 
+                    alt="not-found-image" 
+                />
+                
+                <div id="not-found-text" class="not-found-text">
+                    <p class="not-found-title"><b>Ningun mensaje fue encontrado</b></p>
+                    <p class="not-found-subtitle">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div class="result-text-container">
+                <textarea 
+                    id="result-text" 
+                    class="result-text" 
+                    readonly
+                    rows="30"
+                    hidden
+                ></textarea>
+    
+                <button 
+                    id="copy-text-button" 
+                    class="copy-text-button" 
+                    hidden
+                >
+                    Copiar
+                </button>
+            </div>
+        </div>
+    </div>  
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
+
